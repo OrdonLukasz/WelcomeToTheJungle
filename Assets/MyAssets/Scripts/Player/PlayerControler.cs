@@ -8,15 +8,15 @@ using UnityEngine.SceneManagement;
 public class PlayerControler : MonoBehaviour
 {
     #region Variables
-    public ScriptManager skryptManager;
+    public ScriptManager scriptManager;
     public RestartMenu restartMenu;
 
     public GameObject[] hearts;
 
     public int amountOfJumps = 1;
     public int facingDirection;
-    public float playerSpeed = 10f;
-    public float playerJumpForce = 12f;
+    public float playerSpeed = 10.0f;
+    public float playerJumpForce = 12.0f;
     public float pushForce;
     public float groundCheckRadius;
     public float dashTime;
@@ -24,7 +24,7 @@ public class PlayerControler : MonoBehaviour
     public float distanceBetweenImages;
     public float dashCoolDown;
     public float hittime;
-    public float movement = 2;
+    public float movement = 2.0f;
     public float virableJumpHeightMultiplier = 0.05f;
 
     public bool canJump;

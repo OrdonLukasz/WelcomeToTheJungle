@@ -7,13 +7,13 @@ public class EnemyMushroom : MonoBehaviour
     [SerializeField]
     private float speed = 1.5f;
     [SerializeField]
-    private float enemyJumpForce = 6f;
+    private float enemyJumpForce = 6.0f;
 
-    public bool moveRight;
     public bool isTurnedLeft;
     public bool isGrounded;
     public bool isRunning;
     public bool canJump;
+    public bool moveRight;
 
     public int livePoints = 3;
     public GameObject enemyMushroom;

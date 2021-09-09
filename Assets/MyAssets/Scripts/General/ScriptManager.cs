@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ScriptManager : MonoBehaviour
 {
-    public GameObject player;
-    public CameraController mainCamera;
+    public  GameObject player;
+    [SerializeField]
+    private CameraController mainCamera;
 }

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public GameObject[] hearts;
+    [SerializeField]
+    private GameObject[] hearts;
     private int life;
-    
+
     private void Start()
     {
         life = hearts.Length;

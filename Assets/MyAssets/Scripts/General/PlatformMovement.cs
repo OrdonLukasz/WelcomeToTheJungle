@@ -6,9 +6,10 @@ public class PlatformMovement : MonoBehaviour
 {
     [SerializeField]
     private float speed = 1.5f;
-
-    public bool moveRight;
-    public GameObject platform;
+    [SerializeField]
+    private bool moveRight;
+    [SerializeField]
+    private GameObject platform;
 
     private void FixedUpdate()
     {

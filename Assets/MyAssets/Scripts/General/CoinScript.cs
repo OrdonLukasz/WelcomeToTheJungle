@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class CoinScript : MonoBehaviour
 {
     public int coinValue = 1;
 

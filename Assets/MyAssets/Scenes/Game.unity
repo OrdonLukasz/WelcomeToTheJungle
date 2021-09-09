@@ -1230,7 +1230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f263877fa8162c4ebde7de4895d8cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skryptManager: {fileID: 946473588}
+  scriptManager: {fileID: 946473588}
   restartMenu: {fileID: 208830376}
   hearts:
   - {fileID: 1309675429}
@@ -1541,7 +1541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d1bf564afa6ea45800324be29e7ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skryptManager: {fileID: 946473588}
+  scriptManager: {fileID: 946473588}
   cameraSpeed: 3
   cameraOffset: {x: 0, y: 0, z: -2.93}
 --- !u!1 &353213055
@@ -26030,7 +26030,7 @@ GameObject:
   - component: {fileID: 791961791}
   - component: {fileID: 791961790}
   m_Layer: 10
-  m_Name: Platform (1)
+  m_Name: Platform1
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91298,10 +91298,11 @@ MonoBehaviour:
   knockbackDeathSpeedX: 10
   knockbackDeathSpeedY: 5
   deathTorque: 1
-  applyKnockback: 1
+  playerController: {fileID: 288984614}
   aliveGO: {fileID: 379830944}
   brokenTopGo: {fileID: 379626163}
   brokenBotGo: {fileID: 1301531408}
+  applyKnockback: 1
 --- !u!1 &2011219261
 GameObject:
   m_ObjectHideFlags: 0
@@ -91343,8 +91344,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 12.239998, y: -21.77}
-  m_SizeDelta: {x: 22.922897, y: 42.473946}
+  m_AnchoredPosition: {x: 12.239998, y: -27.27}
+  m_SizeDelta: {x: 22.922897, y: 53.467873}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2011219263
 MonoBehaviour:

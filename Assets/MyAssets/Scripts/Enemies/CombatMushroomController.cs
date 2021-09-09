@@ -4,33 +4,52 @@ using UnityEngine;
 
 public class CombatMushroomController : MonoBehaviour
 {
+    #region Variables
     [SerializeField]
-    private float maxHealth = 3, knockbackSpeedX, knockbackSpeedY, knockbackDuration;
+    private float maxHealth = 3.0f;
     [SerializeField]
-    private float knockbackDeathSpeedX, knockbackDeathSpeedY, deathTorque;
-    private float currentHealth, knockbackStart;
+    private float knockbackSpeedX;
+    [SerializeField]
+    private float knockbackSpeedY;
+    [SerializeField]
+    private float knockbackDuration;
+    [SerializeField]
+    private float knockbackDeathSpeedX;
+    [SerializeField]
+    private float knockbackDeathSpeedY;
+    [SerializeField]
+    private float deathTorque;
+
+    private float currentHealth;
+    private float knockbackStart;
+
+    private int playerFacingDirection;
+
+    [SerializeField]
+    private PlayerControler playerController;
+
+    [SerializeField]
+    private GameObject aliveGO;
+    [SerializeField]
+    private GameObject brokenTopGo;
+    [SerializeField]
+    private GameObject brokenBotGo;
+
+    private Rigidbody2D rbAlive;
+    private Rigidbody2D rbBrokenTop;
+    private Rigidbody2D rbBrokenBot;
+    private Animator aliveAnim;
+
     [SerializeField]
     private bool applyKnockback;
 
-    private PlayerControler pc;
-    [SerializeField]
-    private GameObject aliveGO, brokenTopGo, brokenBotGo;
-    private Rigidbody2D rbAlive, rbBrokenTop, rbBrokenBot;
-    private Animator aliveAnim;
-    private int playerFacingDirection;
-
-    private bool playerOnLeft, knockback;
-
+    private bool playerOnLeft;
+    private bool knockback;
+    #endregion
 
     private void Start()
     {
         currentHealth = maxHealth;
-
-        pc = GameObject.Find("Player").GetComponent<PlayerControler>();
-
-        aliveGO = transform.Find("Alive").gameObject;
-        brokenTopGo = transform.Find("DeadTop").gameObject;
-        brokenBotGo = transform.Find("DeadBottom").gameObject;
 
         aliveAnim = aliveGO.GetComponent<Animator>();
         rbAlive = aliveGO.GetComponent<Rigidbody2D>();
@@ -48,7 +67,7 @@ public class CombatMushroomController : MonoBehaviour
     private void Damage(float amount)
     {
         currentHealth -= amount;
-        playerFacingDirection = pc.GetFacingDirection();
+        playerFacingDirection = playerController.GetFacingDirection();
 
         if (playerFacingDirection == 1)
         {
